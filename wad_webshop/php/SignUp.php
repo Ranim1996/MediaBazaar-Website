@@ -14,6 +14,7 @@ if(!isset($_SESSION[$username]))
     $birthdate=$_POST['birthdate'];
     $username=$_POST['username'];
     $password=$_POST['password'];
+    $confirm_password=$_POST['confirm-password'];
     $userid=rand(100,100000);
 
     if($first_name==null || $last_name==null || $email==null || $city==null || $phone==null || 
@@ -77,7 +78,6 @@ if(!isset($_SESSION[$username]))
             }
         }
     }
-
     echo $msg;
 }
 ?>

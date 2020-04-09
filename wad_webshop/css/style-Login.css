@@ -10,22 +10,23 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .logo{
-    margin-top: 1%;
+    margin-top: 7%;
     width: 400px;
     height: 100px;
 }
 
-.SignUpBox{
+.loginbox{
     background-color: white;
     background-size: cover;
     width: 400px;
     height: auto;
     border-radius: 5px;
-    color: black;  
-    padding: 20px  30px;
+    color: #fff;  
+    padding: 30px;
     box-shadow:0.5px 0.5px 3px 3px  darkgrey;
 }
 
@@ -35,18 +36,18 @@ h1{
     font-size: 2rem;
 }
 
-.SignUpBox p{
+.loginbox p{
     margin: 0;
-    padding: 1%;
+    padding: 0;
     font-weight: bold;
 }
 
-.SignUpBox input{
+.loginbox input{
     width: 100%;
     margin-bottom: 20px;
 }
 
-.SignUpBox input{   
+.loginbox input[type="text"], input[type="password"]{   
     border: 1px solid rgb(95, 94, 95);
     border-radius: 6px;
     padding-left: 4px;
@@ -56,7 +57,7 @@ h1{
     font-size: 16px;
 }
 
-.SignUpBox input[type="submit"]{
+.loginbox input[type="submit"]{
     border: none;
     outline: none;
     height: 40px;
@@ -64,16 +65,14 @@ h1{
     color: #fff;
     font-size: 1.5rem;
     border-radius: 6px;
-    padding: 5%;
-    height: 50px;
 }
 
-.SignUpBox input[type="submit"]:hover{
+.loginbox input[type="submit"]:hover{
     cursor: pointer;
     background: rgb(109, 167, 255);
 }
 
-.signup-link{
+.registration-link{
     margin-top: 1%;
     text-decoration: none;
     font-size: 1rem;
@@ -81,11 +80,9 @@ h1{
     color: #207EB1;
 }
 
-.signup-link:hover{
+.registration-link:hover{
     color: blue;
 }
-
-
 
 footer p{
     margin-top: 27%;
@@ -102,4 +99,5 @@ footer p{
     .loginbox{
         width: 275px;
     }
+
 }

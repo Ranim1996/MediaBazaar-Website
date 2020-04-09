@@ -16,6 +16,7 @@ if(!isset($_SESSION[$username]))
         $birthdate=$_POST['birthdate'];
         $username=$_POST['username'];
         $password=$_POST['password'];
+        $confirm_password=$_POST['confirm-password'];
         $userid=rand(100,100000);
 
         if($first_name==null || $last_name==null || $email==null || $city==null || $phone==null || 
@@ -38,6 +39,19 @@ if(!isset($_SESSION[$username]))
         elseif(!preg_match("/[0-9- ]{8,12}$/",$birthdate))
         {
             $msg="Date not valid<br>";   
+        }
+        elseif($confirm_password!=$password)
+        {
+            $msg="Incorect confirmation";   
+        }
+        
+        elseif (preg_match("/$username/", $password)) 
+        {
+            $msg="Password should not contain your username";   
+        }
+        elseif (preg_match("/$first_name/", $password)) 
+        {
+            $msg="Password should not contain your first name";   
         }
         else
         {         
@@ -113,12 +127,14 @@ if(!isset($_SESSION[$username]))
                 <input type="text" name="username" placeholder="Enter Username">
                 <p>Password</p>
                 <input type="password" name="password" placeholder="Enter Password">
+                <p>Confirm password</p>
+                <input type="password" name="confirm-password" placeholder="Enter Password">
 
                 <input type="submit" name="signup" value="Create Account">                              
         </form>        
        <p style="color:red"><?php if ($msg != "") echo "$msg<br><br>"; ?></p> 
     </div>
-    <a class="signup-link" href="Login.html">Have already an account?</a>
+    <a class="signup-link" href="./Login.php">Have already an account?</a>
     
     <footer>
         <p>Mediabazaar Client Account | Personal data</p>

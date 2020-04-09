@@ -72,7 +72,7 @@ h1{
     background: rgb(109, 167, 255);
 }
 
-.registration-link{
+.registration-link, .new-password-link{
     margin-top: 1%;
     text-decoration: none;
     font-size: 1rem;
@@ -80,12 +80,16 @@ h1{
     color: #207EB1;
 }
 
-.registration-link:hover{
+.registration-link:hover {
     color: blue;
-}z
+}
 
-footer p{
-    margin-top: 27%;
+.new-password-link:hover{
+    color: blue;
+}
+
+.footer p {
+    margin-top:30%;
     padding-bottom: 3%;
     border-bottom:1px solid darkgrey;
 }
