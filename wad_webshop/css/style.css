@@ -38,6 +38,8 @@ a
     align-items: center;
     background-color: white;
     border-bottom: 1px solid grey;
+    height: 4rem;
+    z-index: 1000;
 }
 
 .main-header i{
@@ -156,7 +158,7 @@ main .menu-adds{
  .stock-menu ul ul{
     position: relative;   
     display: none;  
-    top: -111%; 
+    top: -109%; 
     left: 100%;
     background-color: rgb(109, 167, 255);    
     border-top-right-radius: 5px;
@@ -168,6 +170,24 @@ main .menu-adds{
 .stock-menu ul li:hover > ul{
     display: block;
 } 
+
+
+
+/* POP-UP MENU */
+/* .pop-up-menu
+{
+    position: absolute;
+    left: -32;
+    top: 25%;
+    width: 4%;
+} */
+
+
+
+
+
+
+
 
 
 
@@ -218,10 +238,14 @@ main .menu-adds{
 .advertisements{
     width: 100%;
     height: auto;
-    background-image: url("./images/1691943.jpg");
-    background-size: cover;
+    
     border-radius: 5px;    
 }
+
+.stock-detailed{
+    z-index: 100;
+}
+
 
 
 
@@ -248,14 +272,14 @@ main .menu-adds{
 
 
 /* BEST-SALES */
-.best-sales{
+.top-products{
     margin: 2%;   
     height: 40%;
     display: flex;
     flex-direction: column;
 }
 
-.best-sales h2
+.top-products h2
 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
@@ -263,7 +287,7 @@ main .menu-adds{
     font-size: 1.5rem;
 }
 
-.best-sales h3
+.top-products h3
 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
@@ -280,7 +304,7 @@ main .menu-adds{
     align-items: center;
 }
 
-.best-sales article{
+.top-products article{
     width: 18%;
     height: 20rem;
     border: 1px solid white;
@@ -288,23 +312,29 @@ main .menu-adds{
     background-color: white;
 }
 
-.best-sales .image{
+.top-products .image{
     width: 100%;
     height: 70%;
 }
 
-.best-sales .product-name{
+.top-products .product .image img
+{
+    height: 100%;
+    width: 100%;
+}
+
+.top-products .product-name{
     width: 100%;
     height: 20%;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;    
 }
 
-.best-sales .product-price{
+.top-products .product-price{
     text-align: right;
 }
 
-.best-sales .changing-adds{
+.top-products .changing-adds{
     background-color: white;
     height:2rem;
     border-radius: 7px;

@@ -1,0 +1,33 @@
+.menu-adds .main-content
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.stock-menu > ul > li{
+    position: static;   
+}
+
+.stock-menu ul li a{
+    display: block;
+}
+
+
+
+.pop-up-menu ul ul{
+    position: relative;   
+    display: none;  
+    top: -109%; 
+    left: 100%;
+    background-color: rgb(109, 167, 255);    
+    border-top-right-radius: 5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+.pop-up-menu ul li:hover > ul{
+    display: block;
+} 
+

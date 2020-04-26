@@ -7,6 +7,8 @@ $password = "1234";
  
 try 
 {
+    ini_set('mysql.connect_timeout', 300);
+    ini_set('default_socket_timeout', 300); 
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);     
 }

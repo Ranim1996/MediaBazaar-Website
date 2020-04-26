@@ -40,21 +40,19 @@
                     }       
 
                     require_once('./php/db_connect.php');
-                    $query = "UPDATE user SET password = '$msg' WHERE username = '$username'";
+                    $query = "UPDATE user SET password = '$msg' WHERE username = '$username';";
                 
-                    $stm=$conn->prepare($query);
-    
-                    $stm->bindValue(':password',$password);
-                    
-                    $execute_success=$stm->execute();
-                    $stm->closeCursor();
-                    if(!$execute_success)
-                    {
-                        $msg="Wrong username"; 
-                    }
+                    $stm=$conn->prepare($query);    
+                    $stm->execute();                    
+                    $stm->closeCursor();    
+                }
+                else
+                {
+                    $msg="Wrong username"; 
                 }
             } 
         }
+                        
     }
     
 ?>
@@ -79,10 +77,9 @@
                
                 <input type="submit"  name="login" value="Generate">            
             </form> 
-            <p style="color:red"><?php if ($msg != "") echo "$msg<br><br>"; ?></p> 
+            <p style="color:red"><?php if ($msg != "") echo "Your new password is: $msg<br><br>"; ?></p> 
     </div>
     <a class="registration-link" href="Login.php">Login</a>
-    <a class="new-password-link" href="SignUp.php">Forgotten password?</a>
     <footer class="footer">
         <p>Mediabazaar Client Account | Personal data</p>
     </footer>

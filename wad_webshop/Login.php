@@ -76,7 +76,7 @@
             <p style="color:red"><?php if ($msg != "") echo "$msg<br><br>"; ?></p> 
     </div>
     <a class="registration-link" href="SignUp.php">Don't have an account?</a>
-    <a class="new-password-link" href="SignUp.php">Forgotten password?</a>
+    <a class="new-password-link" href="ForgottenPassword.php">Forgotten password?</a>
     <footer class="footer">
         <p>Mediabazaar Client Account | Personal data</p>
     </footer>
