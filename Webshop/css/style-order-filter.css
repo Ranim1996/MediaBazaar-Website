@@ -1,0 +1,77 @@
+
+  
+  .select-box-ord {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    margin-left: 5%;
+  }
+  
+  .select-box-ord .options-container-ord {
+    background: white;
+    color: #2f3640;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 5px;
+    overflow: hidden;  
+    order: 1;
+  }
+  
+  .selected-ord {
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: #2f3640;
+    position: relative;    
+    order: 0;
+    border-bottom: 1px solid #2f3640;
+  }
+  
+  .selected-ord::after {
+    content: "";
+    background: url("./images/chevron-arrow-down.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+    position: absolute;
+    height: 1.2rem;
+    width: 1.2rem;
+    right: 10%;
+    top: 30%;
+  
+    transition: all 0.4s;
+  }
+  
+  .select-box-ord .options-container-ord.active {
+    max-height: 50%;
+    opacity: 1;
+    z-index: 1;
+    border: 1px solid lightgray;
+  }
+  
+  .select-box-ord .options-container-ord.active + .selected-ord::after {
+    transform: rotateX(180deg);  
+
+  }
+  
+  
+  
+  .select-box-ord .option-ord,
+  .selected-ord {
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+  
+  .select-box-ord .option-ord:hover {
+    background: #bfbfc0;
+  }
+  
+  .select-box-ord label {
+    cursor: pointer;
+  }
+  
+  .select-box-ord .option-ord .radio {
+    display: none;
+  }

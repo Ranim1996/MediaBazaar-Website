@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.top-product{
+    width: 90%;
+    height: 20%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    margin:2% 5% 0 5%;
+    padding: 2% 5%;
+    cursor: pointer;
+}
+
+.top-product .info{
+    width: 30%;
+    margin: 0;
+}
+
+.top-product h2{
+    color: black;
+    font-size: 1.5rem;
+}
+
+.top-product p{
+    
+    color: black;
+    font-size: 1rem;
+}
+
+.top-product .image{
+    width: 60%;
+    height: 80%;
+    border: 1px solid darkslateblue;
+    margin-left: 5%;
+}
+
+main h1{
+    color: white;
+    font-size: 2rem;
+    margin: 3% ;
+}
+
+.sub-categories,
+.chosen-products{
+    margin: 2%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.sub-categories article,
+.chosen-products article{
+    width: 20%;
+    height: 20rem;
+    margin: 3%;
+    border: 1px solid white;
+    border-radius: 7px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.sub-categories .image,
+.chosen-products .image{
+    width: 100%;
+    height: 70%;
+}
+
+.sub-categories .sub-category-name,
+.chosen-products .product-name{
+    width: 100%;
+    height: 20%;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;  
+    text-align: center;
+}
+
+.sub-categories{
+    flex-wrap: wrap;
+}
+
+
