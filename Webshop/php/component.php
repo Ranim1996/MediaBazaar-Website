@@ -1,41 +1,57 @@
 <?php
+require ('./php/db_connect.php'); 
 
-function component($productid, $productname, $productprice, $productimg, $productDescription){
-    $element ='
-    
-    <div class="col-md-3 col-sm-6 my-3 my-md-0">
-                <form action="index.php" method="post">
-                    <div class="card shadow">
-                        <div>
-                            <img src='.$productimg.' alt="Image1" class="img-fluid card-img-top">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">'.$productname.'</h5>
-                            <h6>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </h6>
-                            <p class="card-text">
-                                '.$productDescription.'
-                            </p>
-                            <h5>
-                                <small><s class="text-secondary">$519</s></small>
-                                <span class="price">$'.$productprice.'</span>
-                            </h5>
-                             <input type="hidden" name="product_id" value='.$productid.'>
+function getData(){
+    global $conn;  
+    $sql = "SELECT * FROM product";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll();
 
-
-                            <button type="submit" class="btn btn-warning my-3" name="add">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-    ';
-    echo $element;
+    if (!$result) {
+        die(mysql_error($conn));
+    }
+    else if(sizeof($result)> 0){
+        return $result;
+    }
 }
+
+// function component($productid, $productname, $productprice, $productimg, $productDescription){
+//     $element ='
+    
+//     <div class="col-md-3 col-sm-6 my-3 my-md-0">
+//                 <form action="index.php" method="post">
+//                     <div class="card shadow">
+//                         <div>
+//                             <img src='.$productimg.' alt="Image1" class="img-fluid card-img-top">
+//                         </div>
+//                         <div class="card-body">
+//                             <h5 class="card-title">'.$productname.'</h5>
+//                             <h6>
+//                                 <i class="fas fa-star"></i>
+//                                 <i class="fas fa-star"></i>
+//                                 <i class="fas fa-star"></i>
+//                                 <i class="fas fa-star"></i>
+//                                 <i class="far fa-star"></i>
+//                             </h6>
+//                             <p class="card-text">
+//                                 '.$productDescription.'
+//                             </p>
+//                             <h5>
+//                                 <small><s class="text-secondary">$519</s></small>
+//                                 <span class="price">$'.$productprice.'</span>
+//                             </h5>
+//                              <input type="hidden" name="product_id" value='.$productid.'>
+
+
+//                             <button type="submit" class="btn btn-warning my-3" name="add">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+//                         </div>
+//                     </div>
+//                 </form>
+//             </div>
+//     ';
+//     echo $element;
+// }
 
 function cartElement($productid, $productimg, $productname, $productprice){
 

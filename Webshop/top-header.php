@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css//all.min.css">
         <link rel="stylesheet" href="./pop-up-menu/style.css">
-    </head>
+    </head> 
     <body>
 
             <div class="pop-up-menu">         
@@ -22,7 +22,18 @@
             <nav class="header-menu">
                 <ul>
                     <li class="profile"><a href="./Login.php"><i class="far fa-user"></i>My Profile</a></li>
-                    <li><a href="####"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="./cart.php"><i class="fas fa-shopping-cart">
+                        <?php
+
+                            if (isset($_SESSION['cart'])){
+                                $count = count($_SESSION['cart']);
+                                echo "<span id=\"cart_count\" class=\"text-warning bg-light\">$count</span>";
+                            }else{
+                                echo "<span id=\"cart_count\" class=\"text-warning bg-light\">0</span>";
+                            }
+
+                        ?>
+                    </i></a></li>
                     <li class="language"><a href="####">NL<img src="./css/images/holland-flag.png"></a></li>
                     <li class="logout"><a href="./Login.php">Log In <i class="fas fa-sign-out-alt"></i></a></li>
                 </ul>

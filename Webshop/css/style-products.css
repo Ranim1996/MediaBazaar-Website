@@ -1,3 +1,8 @@
+.btn {
+  margin-left: 35%;
+  background-color: #8894E7;
+}
+
 .filters{
     display: flex;
     flex-direction: column;
@@ -229,7 +234,7 @@
 }
 
 .product .product-price{
-    text-align: right;
+    text-align: left;
 }
 
 .product .changing-adds{

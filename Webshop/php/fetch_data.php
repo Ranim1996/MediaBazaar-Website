@@ -1,7 +1,7 @@
 <?php 
 session_start();
-include('./db_connect.php');
-
+include('./db_connect.php'); 
+ 
 if(isset($_POST["action"]))
 {
     $category=$_SESSION['categoryVal'];
@@ -49,14 +49,20 @@ if(isset($_POST["action"]))
         {
             $output .= '
             <article class="product">
-             
+                <form method="post" action="ProductsPage.php?action=add$id='. $row['id'].'">
                         <div class="image">
                             <img src="' . $row['product-image'] . '">
                         </div>
                         <header class="product-name">
                             <h3>'. $row['product_name'] .'</h3>
                         </header>
-                        <h3 class="product-price">'. $row['product_price'] .'.-</h3>
+                        <h3 class="product-price">
+                            '. $row['product_price'] .'.-
+                            <button type="submit" class="btn" name="add">Add to Cart</button>
+                            </h3>
+                        <input type="hidden" name="product_id" value='. $row['id'].'>
+                        
+                </form>
             </article>
             ';
         }
