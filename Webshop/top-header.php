@@ -17,8 +17,15 @@
             </div>
 
             <a class="logo-href" href="Index.php"><img src="./css/images/mediaBazaarLogo.png"></a>
+            <!-- 
             <input type="search" id="search-stock">
-            <label for="search-stock"><i class="fas fa-search"></i></label>
+            <label for="search-stock"><i class="fas fa-search"></i></label>  -->
+
+            <form class="search-product" action="./php/SearchProductPage.php" method="POST">        
+                <input type="text" name="search" id="search-stock" placeholder="Search Product" class="search-input">
+                <button id="btnSearch" type="submit" name="submit-product"><i class="fas fa-search"></i></button>
+            </form>
+
             <nav class="header-menu">
                 <ul>
                     <li class="profile"><a href="./Login.php"><i class="far fa-user"></i>My Profile</a></li>

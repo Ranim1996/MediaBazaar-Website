@@ -52,24 +52,41 @@ a
     width: 22%;
     height: 100%;
     flex-shrink: 1;
+    margin-left: 5px;
 }
 
 .main-header img{
     width: 100%;   
 }
 
-#search-stock{
-    width: 25%;
+/*---- SEARCH PRODUCT ----- */
+/*--------------------------*/
+
+.search-product{
+    margin-left: 200px;
+    width:25%;
+    border-radius: 8px;
+}
+.search-input{
+    width: 80%;
     height: 2rem;
-    border:1px solid #207EB1;    
+    border: 2px solid #207EB1;
+    background-color: #ffffff;
     border-radius: 8px;
     font-size: 1.2rem;
-    margin: 0 0.5% 0 3%;
-    flex-shrink: 1;
-    outline: none;
     padding-left: 6px;
 }
+.search-product #btnSearch{
+    height: 2rem;
+    font-size: 1.2rem;
+    background-color: #ffffff;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
 
+/*--------------------------*/
+/*--------------------------*/
 .header-menu
 {
     margin-left: 6%;
@@ -88,7 +105,6 @@ a
 {    
     display:inline-block;
     margin:0 1%;
-    
 }
 
 .profile 
