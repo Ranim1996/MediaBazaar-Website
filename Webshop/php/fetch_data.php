@@ -9,7 +9,7 @@ if(isset($_POST["action"]))
     $query="SELECT * FROM product WHERE Category = '$category' "; 
     
     if(isset($_POST["minimum_price"], $_POST["maximum_price"]) && !empty($_POST["minimum_price"]) && !empty($_POST["maximum_price"]))
-    {
+    { 
         $query .= "
         AND product_price BETWEEN '".$_POST["minimum_price"]."' AND '".$_POST["maximum_price"]."'
         ";
@@ -59,8 +59,8 @@ if(isset($_POST["action"]))
                         <h3 class="product-price">
                             '. $row['product_price'] .'.-
                             <button type="submit" class="btn" name="add">Add to Cart</button>
-                            </h3>
-                        <input type="hidden" name="product_id" value='. $row['id'].'>
+                        </h3>
+                        <input type="hidden" name="product_id" value='. $row['id'].'> 
                         
                 </form>
             </article>

@@ -118,6 +118,12 @@ button {
     border-color: #dc3545;
 }
 
+.btn-warning {
+    color: #fff;
+    background-color: #FFA833;
+    border-color: #FFA833;
+}
+
 /*Container*/
 .container-fluid {
     width: 100%;

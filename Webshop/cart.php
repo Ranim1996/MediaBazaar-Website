@@ -101,6 +101,8 @@ if (isset($_POST['remove'])){
                         <h6>$<?php
                             echo $total;
                             ?></h6>
+                        <hr>
+                        <button type="submit" class="btn btn-warning" name="add">Purchase</button>
                     </div>
                 </div>
             </div>

@@ -17,6 +17,38 @@ session_start();
         echo $e->getMessage();
     }  
 
+    //add products to the cart according to their id.
+    if (isset($_POST['add'])){
+
+        if(isset($_SESSION['cart'])){
+
+            $product_id = array_column($_SESSION['cart'], 'product_id');
+
+            if(in_array($_POST['product_id'], $product_id)){
+                echo "<script>alert('Product is already added in the cart')</script>";
+                echo "<script>window.location = 'ProductsPage.php'</script>";
+            }else{
+
+                $count = count($_SESSION['cart']);
+                $item_array = array(
+                    'product_id' => $_POST['product_id']
+                );
+
+                $_SESSION['cart'][$count] = $item_array;
+            }
+
+        }else{
+
+            $item_array = array(
+                    'product_id' => $_POST['product_id']
+            );
+
+            // Create new session variable
+            $_SESSION['cart'][0] = $item_array;
+            print_r($_SESSION['cart']);
+        }
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -290,17 +322,22 @@ session_start();
                 <div class="products">
 
                     <?php 
-                    foreach($topProducts as $row)
+                    foreach($topProducts as $row) 
                     {
                     ?>
                         <article class="product">
-                        <div class="image">
-                            <img src="<?php echo $row['product-image'];?>">
-                        </div>
-                        <header class="product-name">
-                            <h3><?php echo $row['product_name']?></h3>
-                        </header>
-                        <h3 class="product-price"><?php echo $row['product_price']?>.-</h3>
+                            <form method="post" action="Index.php?action=add$id='. $row['id'].'">
+                                <div class="image">
+                                    <img src="<?php echo $row['product-image'];?>">
+                                </div>
+                                <header class="product-name">
+                                    <h3><?php echo $row['product_name']?></h3>
+                                </header>
+                                <h3 class="product-price"><?php echo $row['product_price']?>.-
+                                    <button type="submit" class="btn" name="add">Add to Cart</button>
+                                </h3>
+                                <input type="hidden" name="product_id" value= <?php echo $row['product_name']?> > 
+                            </form>
                         </article>
                     <?php    
                     }

@@ -13,7 +13,7 @@ session_start();
             $category=$_GET["data"];
 
             $_SESSION['categoryVal']=$category;
-        }
+        } 
         $nrPr = $conn->query("SELECT COUNT(id) FROM product WHERE Category = '$category';");
         $nrProducts = $nrPr->fetch();           
      
@@ -74,7 +74,7 @@ session_start();
         <title>MediaBazaar</title>
         <meta charset="utf-8"/>        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/style-products.css">
+        <link rel="stylesheet" href="./css/style-products.css"> 
         <link rel="stylesheet" href="./css/style-order-filter.css">
         <link rel="icon" href="./css/images/9A902BDC06A64F96A24667E63CFB24FC.png">
         <script src="./js/jquery-3.5.0.min.js"></script>
@@ -160,7 +160,7 @@ session_start();
                             
             </aside>
         </main>
-
+ 
         <footer>
             <?php include ('./footer.php') ?>
         </footer> 
