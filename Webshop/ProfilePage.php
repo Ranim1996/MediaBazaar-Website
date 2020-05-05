@@ -27,13 +27,14 @@ session_start();
                     <nav class="profile-nav">
                         <ul>
                             <button onclick="addIframe('pd')">Personal data</button>
-                            <button onclick="addIframe('myp')">My products</button>
+                            <!-- <button onclick="addIframe('myp')">My products</button> -->
                         </ul>
                     </nav>
                 </aside>
 
                 <aside id="profile-info">
-                    <iframe id="myFrame"></iframe>                                          
+                    <!-- <iframe id="myFrame"></iframe>  -->
+                    <?php include ('./PersonalInfo.php') ?>                                         
                 </aside>
 
             </div>

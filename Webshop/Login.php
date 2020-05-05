@@ -39,7 +39,7 @@
                     $_SESSION['birthdate'] = $user[6];
                     $_SESSION['username'] = $user[7];
                     $_SESSION['password'] = $user[8];
-
+                    $_SESSION['loggedin'] = TRUE;
                     header('location: ProfilePage.php');                            
                 }
                 else
