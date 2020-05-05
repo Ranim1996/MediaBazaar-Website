@@ -322,6 +322,11 @@ main .menu-adds{
     align-items: center;
 }
 
+.products form{
+    height: 98%;
+}
+
+
 .top-products article{
     width: 18%;
     height: 20rem;
@@ -349,7 +354,20 @@ main .menu-adds{
 }
 
 .top-products .product-price{
-    text-align: right;
+    text-align: left;
+}
+
+.btn{
+    border-radius: 5px;
+    background: #04276B;
+    color: white;
+    border: none;
+    width: 50%;
+    height: 2rem;
+}
+
+.btn:hover{
+    background: #2565A5;
 }
 
 .top-products .changing-adds{

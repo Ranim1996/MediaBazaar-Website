@@ -19,10 +19,6 @@ else
     $loggedInHref = './ProfilePage.php';
     $new_link = str_replace($loggedInHref, $hrefNotLoggedIn, $notLoggedInlink);
 }
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +44,7 @@ else
             <input type="search" id="search-stock">
             <label for="search-stock"><i class="fas fa-search"></i></label>  -->
 
-    <form class="search-product" action="./php/SearchProductPage.php" method="POST">
+    <form class="search-product" action="./SearchProductPage.php" method="POST">
         <input type="text" name="search" id="search-stock" placeholder="Search Product" class="search-input">
         <button id="btnSearch" type="submit" name="submit-product"><i class="fas fa-search"></i></button>
     </form>

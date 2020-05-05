@@ -54,6 +54,9 @@ if(isset($_POST["action"]))
                             <img src="' . $row['product-image'] . '">
                         </div>
                         <header class="product-name">
+                                <h3>'. $row['Brand'] .'</h3>
+                            </header>
+                        <header class="product-name">
                             <h3>'. $row['product_name'] .'</h3>
                         </header>
                         <h3 class="product-price">
