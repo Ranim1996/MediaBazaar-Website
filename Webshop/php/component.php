@@ -9,7 +9,7 @@ function getData(){
     $result = $stmt->fetchAll();
 
     if (!$result) {
-        die(mysql_error($conn));
+        die(mysqli_error($conn));
     }
     else if(sizeof($result)> 0){
         return $result;
