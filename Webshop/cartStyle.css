@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+html{
+    display: flex;
+    flex-direction: column;
+}
+
 /*nav bar*/
 .bg-dark {
     background-color: #343a40!important;
@@ -135,7 +140,7 @@ button {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    height: 29rem;
+    height: auto;
 }
 
 .row {
@@ -241,10 +246,4 @@ img {
 
 .text-success {
     color: #28a745;
-}
-
-footer{
-    bottom: 0;
-    width: 100%;
-    position: fixed;
 }

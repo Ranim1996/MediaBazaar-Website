@@ -281,3 +281,27 @@
 .btn:hover{
     background: #2565A5;
 }
+
+@media only screen and (min-width: 150px) and (max-width: 600px){
+    .main-products{
+        flex-direction: column;
+    }
+
+    .price, .brand{
+        width: 18.3rem;
+    }
+
+    #price_range{
+        width: 88%;
+        left: 5%;
+        right: 5%;
+    }
+
+    .quick-selecting .select-box-ord{
+        width: 90%;
+    }
+
+    .products article{
+        width: 60%;
+    }
+}
