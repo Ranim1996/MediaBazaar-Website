@@ -71,17 +71,17 @@ else
             {
                 //session_start();
                 //$_SESSION['loggedin'] = FALSE;
-                echo "<li class=\"logout\"><a href=\"./Login.php\">Log in <i class=\"fas fa-sign-out-alt\"></i></a></li>";
+                echo "<li class=\"logout\"><a href=\"./Login.php\">Log in</a></li>";
             }
             else
             {
                 if($_SESSION['loggedin'] == TRUE)
                 {
-                    echo "<li class=\"logout\"><a href=\"./php/Logout.php\">Log out <i class=\"fas fa-sign-out-alt\"></i></a></li>";
+                    echo "<li class=\"logout\"><a href=\"./php/Logout.php\">Log out</a></li>";
                 }
                 else
                 {
-                    echo "<li class=\"logout\"><a href=\"./Login.php\">Log in <i class=\"fas fa-sign-out-alt\"></i></a></li>";
+                    echo "<li class=\"logout\"><a href=\"./Login.php\">Log in</a></li>";
                 }
             }
                 

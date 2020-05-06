@@ -331,6 +331,9 @@ session_start();
                                     <img src="<?php echo $row['product-image'];?>">
                                 </div>
                                 <header class="product-name">
+                                    <h3><?php echo $row['Brand']?></h3>
+                                </header>
+                                <header class="product-name">
                                     <h3><?php echo $row['product_name']?></h3>
                                 </header>
                                 <h3 class="product-price"><?php echo $row['product_price']?>.-

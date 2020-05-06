@@ -63,7 +63,7 @@ a
 /*--------------------------*/
 
 .search-product{
-    margin-left: 200px;
+    margin-left: 10%;
     width:25%;
     border-radius: 8px;
 }
@@ -89,9 +89,13 @@ a
 /*--------------------------*/
 .header-menu
 {
-    margin-left: 6%;
+    margin-left: 5%;
     width: 30%;
     position: right;
+}
+
+.header-menu .profile{
+    width: 6rem;
 }
 
 .header-menu  ul
@@ -342,13 +346,14 @@ main .menu-adds{
 
 .top-products .product .image img
 {
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 90%;
+    margin: 5%;
 }
 
 .top-products .product-name{
     width: 100%;
-    height: 20%;
+    height: auto;
     border-top: 1px solid grey; 
     border-bottom: 1px solid grey;    
 }

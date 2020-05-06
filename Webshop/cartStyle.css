@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 /*nav bar*/
 .bg-dark {
     background-color: #343a40!important;
@@ -131,6 +135,7 @@ button {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    height: 29rem;
 }
 
 .row {
@@ -210,8 +215,8 @@ small {
 img {
     max-width: 100%;
     height: auto;
-    background: lightblue;
-    background: radial-gradient(white 30%, lightblue 70%);
+    /* background: lightblue;
+    background: radial-gradient(white 30%, lightblue 70%); */
 }
 
 /*Total Price and Details*/
@@ -236,4 +241,10 @@ img {
 
 .text-success {
     color: #28a745;
+}
+
+footer{
+    bottom: 0;
+    width: 100%;
+    position: fixed;
 }

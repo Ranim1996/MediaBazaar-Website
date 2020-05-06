@@ -33,7 +33,7 @@ if (isset($_POST['remove'])) {
 
     <link rel="stylesheet" href="cartStyle.css">
     <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="icon" href="./css/images/9A902BDC06A64F96A24667E63CFB24FC.png">
 </head>
 
 <body class="bg-light">
