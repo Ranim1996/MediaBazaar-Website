@@ -11,7 +11,7 @@
 					<ul>
 						<li class="menu-icon"><i class="fas fa-bars"></i></a>
 							<ul>
-								<li><a href="####"><i class="fas fa-tv"></i>TV Video and Gaming</a>
+								<li><a href=""><i class="fas fa-tv"></i>TV Video and Gaming</a>
 								<ul class="stock-detailed">
 									<li class="option-Menu"><h3>TV Video and Gaming</h3></li>
 									<li><a href="./ProductsPage.php?data=TV">TV</a></li>
@@ -22,7 +22,7 @@
 									<li><a href="./ProductsPage.php?data=PC gaming">PC gaming</a></li>
 								</ul>
 							</li>
-							<li><a href="####"><i class="fas fa-mobile-alt"></i>Phones and Tablets</a>
+							<li><a href=""><i class="fas fa-mobile-alt"></i>Phones and Tablets</a>
 								<ul class="stock-detailed">
 									<li class="option-Menu"><h3>Phones and Tablets</h3></li>
 									<li><a href="./ProductsPage.php?data=Phone">Mobile phones</a></li>
@@ -31,7 +31,7 @@
 									<li><a href="./ProductsPage.php?data=Tablet">Tablets</a></li>
 								</ul>
 							</li>
-							<li><a href="####"><i class="fas fa-camera"></i>Photo and Video</a>
+							<li><a href=""><i class="fas fa-camera"></i>Photo and Video</a>
 								<ul class="stock-detailed">
 									<li class="option-Menu"><h3>Photo and Video</h3></li>
 									<li><a href="./ProductsPage.php?data=Mirrorless cameras">Mirrorless cameras</a></li>
@@ -43,7 +43,7 @@
 									<li><a href="./ProductsPage.php?data=Photo and video accessories">Photo and video accessories</a></li>
 								</ul>
 							</li>
-							<li><a href="####"><i class="fas fa-map-marker-alt"></i>Auto and GPS</a>
+							<li><a href=""><i class="fas fa-map-marker-alt"></i>Auto and GPS</a>
 								<ul class="stock-detailed">
 									<li class="option-Menu"><h3>Auto and GPS</h3></li>
 									<li><a href="./ProductsPage.php?data=GPS">GPS navigation</a></li>
@@ -52,7 +52,7 @@
 									<li><a href="./ProductsPage.php?data=Amplifiers">Amplifiers</a></li>
 								</ul>
 							</li>
-							<li><a href="####"><i class="fas fa-laptop"></i>PC peripherias</a>
+							<li><a href=""><i class="fas fa-laptop"></i>PC peripherias</a>
 								<ul class="stock-detailed">
 									<li class="option-Menu"><h3>PC peripherias</h3></li>
 									<li><a href="./ProductsPage.php?data=Laptops">Laptops</a></li>
@@ -64,7 +64,7 @@
 									<li><a href="./ProductsPage.php?data=PC Software">PC Software</a></li>
 								</ul>
 							</li>
-							<li><a href="####"><i class="fas fa-headphones"></i>IT accessories</a>
+							<li><a href=""><i class="fas fa-headphones"></i>IT accessories</a>
 								<ul class="stock-detailed">
 									<li class="option-Menu"><h3>IT accessories</h3></li>
 									<li><a href="./ProductsPage.php?data=USB Sticks">USB Sticks</a></li>
@@ -82,7 +82,7 @@
 									<li><a href="./ProductsPage.php?data=Laptop chargers">Laptop chargers</a></li>
 								</ul>
 							</li>
-							<li><a href="####"><i class="fas fa-bullseye"></i>Outdoors and Sports</a>
+							<li><a href=""><i class="fas fa-bullseye"></i>Outdoors and Sports</a>
 								<ul class="stock-detailed">
 									<li class="option-Menu"><h3>Outdoors and Sports</h3></li>
 									<li><a href="./ProductsPage.php?data=Action cameras">Action cameras</a></li>
@@ -95,7 +95,7 @@
 									<li><a href="./ProductsPage.php?data=Blu Ray">Blu Ray</a></li>
 								</ul>
 							</li>
-							<li><a href="####"><i class="fas fa-blender"></i>Home and Garden</a>
+							<li><a href=""><i class="fas fa-blender"></i>Home and Garden</a>
 								<ul class="stock-detailed">
 									<li class="option-Menu"><h3>Home and Garden</h3></li>
 									<li><a href="./ProductsPage.php?data=Smart home">Smart home</a></li>
@@ -109,7 +109,7 @@
 									<li><a href="./ProductsPage.php?data=Generators">Generators</a></li>
 								</ul>
 							</li>
-							<li><a href="####"><i class="fas fa-laptop-house"></i>Small domestic appliances</a>
+							<li><a href=""><i class="fas fa-laptop-house"></i>Small domestic appliances</a>
 								<ul class="stock-detailed">
 									<li class="option-Menu"><h3>Small domestic appliances</h3></li>
 									<li><a href="./ProductsPage.php?data=Vacuum cleaners">Vacuum cleaners</a></li>
@@ -121,7 +121,7 @@
 								</ul>
 							</li>
 								
-							<li><a href="####"><i class="fas fa-fan"></i>Air conditioners and Heaters</a>
+							<li><a href=""><i class="fas fa-fan"></i>Air conditioners and Heaters</a>
 								<ul class="stock-detailed">
 									<li class="option-Menu"><h3>Air conditioners and Heaters</h3></li>
 									<li><a href="./ProductsPage.php?data=Inverter Split Systems">Inverter Split Systems</a></li>
@@ -131,7 +131,7 @@
 									<li><a href="./ProductsPage.php?data=Heaters">Heaters</a></li>
 								</ul>
 							</li>
-							<li><a href="####"><i class="fas fa-solar-panel"></i></i>Home appliances</a>
+							<li><a href=""><i class="fas fa-solar-panel"></i></i>Home appliances</a>
 								<ul class="stock-detailed">
 									<li class="option-Menu"><h3>Home appliances</h3></li>
 									<li><a href="./ProductsPage.php?data=Washing machines">Washing machines</a></li>
