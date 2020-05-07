@@ -6,10 +6,10 @@
 	<title>Feedback Form</title>
 	<link rel="stylesheet" type="text/css" href="contactStyle.css">
 </head>
- 
+  
 <body>
 
-	<header class="main-header">
+	<header class="main-header"> 
         <?php include('./top-header.php') ?>
     </header>
 

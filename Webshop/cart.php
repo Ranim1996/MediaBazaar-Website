@@ -27,6 +27,8 @@ if (isset($_POST['remove'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>MediaBazaar</title>
@@ -42,7 +44,8 @@ if (isset($_POST['remove'])) {
         <?php include('./top-header.php') ?>
     </header>
 
-    <div class="container-fluid">
+    <div class="main">
+        <div class="container-fluid">
         <div class="row px-5">
             <div class="col-md-7">
                 <div class="shopping-cart">
@@ -80,9 +83,12 @@ if (isset($_POST['remove'])) {
 
                 </div>
             </div>
-            <div class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25">
+            <!-- <div class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25"> -->
 
-                <div class="pt-4">
+    </div>
+
+
+                <div class="purchase">
                     <h6>PRICE DETAILS</h6>
                     <hr>
                     <div class="row price-details">
@@ -117,7 +123,10 @@ if (isset($_POST['remove'])) {
 
             </div>
         </div>
+
     </div>
+
+    
 </main>
     <footer>
         <?php include('./footer.php') ?>

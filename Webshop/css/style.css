@@ -56,7 +56,8 @@ a
 }
 
 .main-header img{
-    width: 100%;   
+    width: 100%;
+    height: 100%;   
 }
 
 /*---- SEARCH PRODUCT ----- */
@@ -369,7 +370,7 @@ main .menu-adds{
     background: #04276B;
     color: white;
     border: none;
-    width: 50%;
+    width: 60px;
     height: 2rem;
 }
 
