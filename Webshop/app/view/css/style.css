@@ -618,3 +618,13 @@ footer .info-sections{
 }
 
 }
+
+.index-body-image{
+    margin-top: 7%;
+}
+#tag-link-index{
+    margin: 20%;
+}
+#tag-link-index img{
+    width: 60%;
+}

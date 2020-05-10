@@ -12,7 +12,10 @@ require ('../core/db_connect.class.php');
 
             $username=$_POST['username'];
             $password=$_POST['password'];
-
+            $query_admin = "SELECT * FROM employee WHERE username='$username' AND password='$password' AND Position='ADMINISTRATOR';";
+            $sth_admin = $dbconn->connect()->prepare($query_admin);
+            $sth_admin->execute();
+            $result_admin = $sth_admin->fetchAll();
             if (empty($username))
             {
                 $msg="Username not entered<br>";   
@@ -21,10 +24,13 @@ require ('../core/db_connect.class.php');
             {
                 $msg="Password not entered<br>";   
             }
+            else if($sth_admin->rowCount() > 0)
+            {
+                header('location: /Webshop/webshopAdmin/adminDashboard.php');
+            }
             else
             {
-                $query= "SELECT * FROM user WHERE username='$username' AND password='$password';";
-
+                $query= "SELECT * FROM user WHERE Username='$username' AND Password='$password';";
                 $sth = $dbconn->connect()->prepare($query);
                 $sth->execute();
                 $result = $sth->fetchAll();
