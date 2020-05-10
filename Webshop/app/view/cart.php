@@ -71,7 +71,7 @@ $productController->RemoveProductFromCart();
                             <hr>
                             <h6>$<?php echo $total;?></h6>
                                 <hr>
-                            <form class="purchase-order" action="./PurchaseOrder.php" method="POST">
+                            <form class="purchase-order" action="\Webshop\app\PurchaseOrder.php" method="POST">
                                 <button type="submit" class="btn btn-warning" name="purchase-order">Purchase</button>
                             </form>
                         </div>

@@ -84,7 +84,7 @@ if(!isset($_SESSION["SignUp"]))
                 }
                 else
                 {
-                    header('location: http://localhost/Webshop/app/view/Login.php');
+                    header('location: /Webshop/app/view/Login.php');
                 }
             }
         }

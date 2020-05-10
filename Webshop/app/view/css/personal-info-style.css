@@ -17,6 +17,7 @@ body{
     font-size: 2rem;
     font-style: normal;
     margin-left: 5%;
+    margin-bottom: 30px;
 }
 
 .name, .credentials{

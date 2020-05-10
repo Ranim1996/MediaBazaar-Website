@@ -64,6 +64,10 @@
 #profile-info{
     width: 75%;
     margin: 3%;
+    background-color: white;
+    border-radius:5px;
+    padding: 3%;
+    height: auto;
 }
 
 #myFrame{

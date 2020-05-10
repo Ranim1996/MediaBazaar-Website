@@ -25,8 +25,7 @@
         $sth = $conn->prepare($query);
         $sth->execute();
         $result = $sth->fetchAll();
-        if($sth->rowCount() > 0)
-           
+        if($sth->rowCount() > 0)    
                 {
                     $user = $result[0];
                    
@@ -35,7 +34,7 @@
                     $_SESSION['email'] = $user[3];
                     $_SESSION['phone'] = $user[5];
                    
-                    header('location: https://www.youtube.com/watch?v=sVbWO7u6K_E');
+                    header('location: /Webshop/app/view/PersonalInfo.php');
                     
                 }
                 else

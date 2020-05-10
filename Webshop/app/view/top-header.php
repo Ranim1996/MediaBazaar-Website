@@ -2,7 +2,7 @@
 
 if (isset($_SESSION['username'])) {
     //session_start();
-    $notLoggedInlink = '<a href="/Webshop/app/view//Login.php">';
+    $notLoggedInlink = '<a href="/Webshop/app/view/Login.php">';
     $hrefNotLoggedIn = '/Webshop/app/view/Login.php';
     $loggedInHref = '/Webshop/app/view/ProfilePage.php';
 
@@ -14,8 +14,8 @@ if (isset($_SESSION['username'])) {
 }
 else
 {
-    $notLoggedInlink = '<a href="/Webshop/app/view//Login.php">';
-    $hrefNotLoggedIn = '/Webshop/app/view//Login.php';
+    $notLoggedInlink = '<a href="/Webshop/app/view/Login.php">';
+    $hrefNotLoggedIn = '/Webshop/app/view/Login.php';
     $loggedInHref = '/Webshop/app/view/ProfilePage.php';
     $new_link = str_replace($loggedInHref, $hrefNotLoggedIn, $notLoggedInlink);
 }
@@ -64,17 +64,17 @@ else
             <?php 
             if(!isset($_SESSION['username']))
             {
-                echo "<li class=\"logout\"><a href=\"./Login.php\">Log in</a></li>";
+                echo "<li class=\"logout\"><a href=\"/Webshop/app/view/Login.php\">Log in</a></li>";
             }
             else
             {
                 if($_SESSION['loggedin'] == TRUE)
                 {
-                    echo "<li class=\"logout\"><a href=\"./php/Logout.php\">Log out</a></li>";
+                    echo "<li class=\"logout\"><a href=\"/Webshop/app/controler/php/Logout.php\">Log out</a></li>";
                 }
                 else
                 {
-                    echo "<li class=\"logout\"><a href=\"./Login.php\">Log in</a></li>";
+                    echo "<li class=\"logout\"><a href=\"/Webshop/app/view/Login.php\">Log in</a></li>";
                 }
             }                
             ?>            

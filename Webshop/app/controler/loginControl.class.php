@@ -41,7 +41,7 @@ require ('../core/db_connect.class.php');
                     $_SESSION['username'] = $user[7];
                     $_SESSION['password'] = $user[8];
                     $_SESSION['loggedin'] = TRUE;
-                    header('location: http://localhost/Webshop/app/view/profilepage.php');                            
+                    header('location: /Webshop/app/view/ProfilePage.php');                            
                 }
                 else
                 {
