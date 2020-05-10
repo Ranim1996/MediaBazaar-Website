@@ -308,7 +308,7 @@ select, input[type="search"]{
 /*------------------------------*/
 .grid-container-order{
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100% ;
   padding: 10px;
   margin-bottom: 40px;
 }
@@ -325,39 +325,41 @@ select, input[type="search"]{
   border-radius: 6px;
   border-color: rgb(0, 0, 0);
   box-shadow: 0 0 3px 0 #555;
-  position: relative;
+  text-align: center;
 }
 .heading-item-order{
-  text-align: left;
   margin-left: 20px;
-  font-size: 18px;
+  font-size: 25px;
   color: #777;
   font-weight: 600;
   margin-bottom: 40px;
 }
-.receiver-order{
+.receiver-order,
+.order-price{
   font-size: 15px;
   color: #777;
   font-weight: 600;
-  text-align: left;
   margin-left: 20px;
   margin-right: 10px;
 }
 .container-receiver{
-  text-align: left;
   margin-bottom: 30px;
 }
 .container-receiver .receiver-order,
 .container-receiver .receiver-name{
   display: inline-block;
-  text-align: left;
+}
+.container-total-price .order-price,
+.container-total-price .total-price{
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 .container-button{
-  text-align: left;
   margin-left: 20px;
 }
 .container-button input{
-  width: 20%;
+  width: 30%;
   text-align: center;
   padding: 8px 0px;
   border: none;
@@ -370,11 +372,7 @@ select, input[type="search"]{
   text-transform: uppercase;
   margin-top: 10px;
 }
-#confirmButton:hover{
-  color: #fff;
-  background-color: rgba(46.0, 78.0, 173.0, 0.8) ;
-  cursor: pointer;
-}
+
 /*------------------------------*/
 /*-----------JAVASCRIPT----------*/
 /*------------------------------*/

@@ -1,9 +1,70 @@
+<?php
+session_start();
+require('./src/php/db_connect.php');
+
+//count orders, used in the orderPage.php
+$count_query = "SELECT COUNT(DISTINCT OrderID) FROM orders;";
+$stm = $conn->prepare($count_query);
+$stm->execute();
+$counts = $stm->fetch();
+foreach($counts as $c)
+{
+  $count_orders = $c;
+}
+
+$count_products = "SELECT COUNT(DISTINCT id) FROM product;";
+$stm = $conn->prepare($count_products);
+$stm->execute();
+$counts = $stm->fetch();
+foreach($counts as $c)
+{
+  $count_products = $c;
+}
+$count_users = "SELECT COUNT(DISTINCT username) FROM user;";
+$stm = $conn->prepare($count_users);
+$stm->execute();
+$counts = $stm->fetch();
+foreach($counts as $c)
+{
+  $count_users = $c;
+}
+//used in the orderPage.php
+$query_order_made = "SELECT * FROM orders ";
+
+$made_stmt = $conn->prepare($query_order_made);
+$made_stmt->execute();
+$made_orders = $made_stmt->fetchAll();
+$made_stmt->closeCursor();
+$total_price = 0;
+function GetPriceOfProduct($id)
+{
+  require('./src/php/db_connect.php');
+  $query_product = "SELECT * FROM product WHERE id='$id'";
+  $stmt = $conn->prepare($query_product);
+  $stmt->execute();
+  $product_price = $stmt->fetchAll();
+  foreach ($product_price as $price_detail) {
+    $price = $price_detail['product_price'];
+  }
+  return $price;
+}
+foreach($made_orders as $order_details)
+{
+  $total_price += GetPriceOfProduct($order_details['ProductID']);
+}
+
+$total_products = 0;
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Admin Media Bazaar</title>
-    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="./src/style/admin.css" />
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
@@ -25,21 +86,6 @@
         </div>
         <div class="top_menu">
           <div class="logo">Media Bazaar Admin</div>
-          <ul>
-            <li>
-              <a href="#" id="search-order"> <i class="fas fa-search"></i></a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fas fa-bell"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fas fa-user"></i>
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
 
@@ -52,13 +98,13 @@
             >
           </li>
           <li>
-            <a href="orderPage.php" id="orders-sidebar">
+            <a href="./src/view/orderPage.php" id="orders-sidebar">
               <span class="icon"><i class="fas fa-shopping-bag"></i></span>
               <span class="title">Orders</span>
             </a>
           </li>
           <li>
-            <a href="productPage.php" id="contact-sidebar">
+            <a href="./src/view/productPage.php" id="contact-sidebar">
               <span class="icon"><i class="fas fa-archive"></i></span>
               <span class="title">Product</span>
             </a>
@@ -73,7 +119,7 @@
                 <div class="item-icon">
                   <i class="fas fa-shopping-cart icon-item"></i>
                 </div>
-                <div class="item-text">Total orders<div class="number-orders">2000</div>
+                <div class="item-text">Total orders<div class="number-orders"><?php echo $count_orders; ?></div>
                 </div>
               </div>
           </div>
@@ -82,7 +128,7 @@
                 <div class="item-icon">
                   <i class="fas fa-dollar-sign icon-item"></i>
                 </div>
-                <div class="item-text">Total income<div class="number-orders">2000</div>
+                <div class="item-text">Total income<div class="number-orders"><?php echo $total_price; ?></div>
                 </div>
               </div>
           </div>
@@ -91,7 +137,7 @@
                 <div class="item-icon">
                   <i class="fa fa-cubes icon-item"></i>
                 </div>
-                <div class="item-text">Total products<div class="number-orders">2000</div>
+                <div class="item-text">Total products<div class="number-orders"><?php echo $count_products; ?></div>
                 </div>
               </div>
           </div>
@@ -100,7 +146,7 @@
                 <div class="item-icon">
                   <i class="fas fa-male icon-item"></i>
                 </div>
-                <div class="item-text">Total users<div class="number-orders">2000</div>
+                <div class="item-text">Total users<div class="number-orders"><?php echo $count_users; ?></div>
                 </div>
               </div>
           </div>
@@ -142,8 +188,6 @@
       let catChart = document.getElementById('categoryChart').getContext('2d');
 
       //globaloptions
-      
-
       //pie chart
       let categChart = new Chart(catChart, {
         type:'doughnut',
@@ -152,9 +196,9 @@
           datasets:[{
             label:'Category',
             data:[
-              300,
-              120,
-              80,
+              8,
+              3,
+              5,
             ],
             backgroundColor:[
               '#ffc107',

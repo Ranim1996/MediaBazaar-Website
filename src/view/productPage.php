@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('db_connect.php');
+require('../php/db_connect.php');
 
 $query_product = "SELECT * FROM product";
 $product_statement = $conn->prepare($query_product);
@@ -32,7 +32,7 @@ foreach ($products as $p) {
 <head>
   <meta charset="UTF-8" />
   <title>Admin Media Bazaar</title>
-  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="../style/admin.css" />
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -57,28 +57,13 @@ foreach ($products as $p) {
       </div>
       <div class="top_menu">
         <div class="logo">Media Bazaar Admin</div>
-        <ul>
-          <li>
-            <a href="#" id="search-order"> <i class="fas fa-search"></i></a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fas fa-bell"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fas fa-user"></i>
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
 
     <div class="sidebar">
       <ul>
         <li>
-          <a href="adminDashboard.php" id="dashboard-sidebar">
+          <a href="/webshopAdmin/adminDashboard.php" id="dashboard-sidebar">
             <span class="icon"><i class="fas fa-home"></i></span>
             <span class="title">Dashboard</span></a>
         </li>
@@ -146,8 +131,8 @@ foreach ($products as $p) {
       </div>
     </div>
   </div>
-  <script src="tableProducts.js"></script>
-  <script src="admin.js"></script>
+  <script src="../js/tableProducts.js"></script>
+  <script src="../js/admin.js"></script>
 </body>
 
 </html>
