@@ -1,0 +1,31 @@
+*{
+    color: rgb(95, 94, 95);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+.html{
+    background-color: #F7F7F7;
+}
+
+main article{
+    border-radius: 5px;
+    width: 90%;
+    background: white;
+    padding:2%;
+    margin: 5%;
+    text-align: center;
+}
+
+.info-pages-info{
+    text-align: left ;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1.5rem;
+    margin: 1rem;
+}
