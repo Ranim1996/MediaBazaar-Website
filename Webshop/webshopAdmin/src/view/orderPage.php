@@ -71,7 +71,7 @@ function GetPriceOfProduct($id)
     <div class="sidebar">
       <ul>
         <li>
-          <a href="/webshopAdmin/adminDashboard.php" id="dashboard-sidebar">
+          <a href="/Webshop/webshopAdmin/adminDashboard.php" id="dashboard-sidebar">
             <span class="icon"><i class="fas fa-home"></i></span>
             <span class="title">Dashboard</span></a>
         </li>
