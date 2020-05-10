@@ -11,6 +11,6 @@ if(isset($_POST['update-password']))
     $stmt = $conn->prepare($query);
     $stmt->execute();
 
-    header('Location: ../ProfilePage.php');
+    header('Location: /Webshop/app/view/ProfilePage.php');
 }
 ?>

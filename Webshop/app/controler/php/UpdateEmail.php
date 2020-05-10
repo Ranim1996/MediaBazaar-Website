@@ -12,6 +12,6 @@ if(isset($_POST['update-email']))
     $stmt = $conn->prepare($query);
     $stmt->execute();
 
-    header('Location: ../ProfilePage.php');
+    header('Location: /Webshop/app/view/ProfilePage.php');
 }
 ?>

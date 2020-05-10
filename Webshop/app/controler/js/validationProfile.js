@@ -45,6 +45,20 @@ function checkEmail(){
     }
 }
 
+function checkPassword(){
+    var Password = document.getElementById("new-password").value;
+    document.getElementById("changeEmail").setAttribute("type", "submit");
+    alert("Password has been successfully updated!");
+}
+
+document.getElementById("changePassword").addEventListener(
+  "click",
+  function () {
+    checkPassword();
+  },
+  false
+);
+
 document.getElementById("changeCity").addEventListener(
   "click",
   function () {

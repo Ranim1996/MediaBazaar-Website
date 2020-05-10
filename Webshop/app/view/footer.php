@@ -41,7 +41,7 @@
             <article class="customer-service">
                     <h4 class="section-header">Customer service</h4>
                     <ul>
-                        <li><a href="./contactPage.php">Contact</a></li>
+                        <li><a href="/Webshop/app/view/contactPage.php">Contact</a></li>
                         <li><a href="./Webshop/app/view/NotImplemented.php">Order and delivery</a></li>
                         <li><a href="./Webshop/app/view/NotImplemented.php">Pay</a></li>
                         <li><a href="./Webshop/app/view/NotImplemented.php">Return</a></li>

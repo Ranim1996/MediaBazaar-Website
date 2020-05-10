@@ -13,7 +13,7 @@ if(isset($_POST['update-city']))
     $stmt = $conn->prepare($query);
     $stmt->execute();
 
-    header('Location: ../ProfilePage.php');
+    header('Location: /Webshop/app/view/ProfilePage.php');
 }
 
 ?>

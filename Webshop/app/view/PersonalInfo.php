@@ -47,7 +47,7 @@ $user_statement->closeCursor();
             </div>
         </div>
         <p>City</p>
-        <form  name="change-city" action="./php/UpdateCity.php" method="POST">
+        <form  name="change-city" action="../controler/php/UpdateCity.php" method="POST">
             <div class="new-value">
                 <input id="new-city" class="change" type="text" name="city" value="<?php echo $user['city']; ?>">
                 <input class="update" id="changeCity" type="submit"  name="update-city" value="✓">
@@ -60,7 +60,7 @@ $user_statement->closeCursor();
         <p>Date of birth</p>
         <h3><?php echo $user['birthdate']; ?></h3>
         <p>Phone number</p>
-        <form action="./php/UpdatePhoneNumber.php" method="POST">
+        <form action="../controler/php/UpdatePhoneNumber.php" method="POST">
             <div class="new-value">
                 <input id="new-phone" class="change" type="text" name="phoneNr" value="<?php echo $user['phone']; ?>">  
                 <input class="update" id="changePhone" type="submit"  name="update-phoneNr" value="✓">  
@@ -69,7 +69,7 @@ $user_statement->closeCursor();
         </form>
 
         <p>Email</p>
-        <form action="./php/UpdateEmail.php" method="POST">
+        <form action="../controler/php/UpdateEmail.php" method="POST">
             <div class="new-value">
                 <input id="new-email" class="change" type="email" name="email" value="<?php echo $user['email']; ?>">
                 <input class="update" id="changeEmail" type="submit"  name="update-email" value="✓"> 
@@ -83,7 +83,7 @@ $user_statement->closeCursor();
             </div>
             <div class="pass">
                 <p>Password</p>
-                <form action="./php/UpdatePasswordInProfilePage.php" method="POST">
+                <form action="../controler/php/UpdatePasswordInProfilePage.php" method="POST">
                     <div class="new-value">
                         <input id="new-password" class="change" type="text" name="password" value="<?php echo $user['password']; ?>">
                         <input class="update" id="changePassword" type="submit"  name="update-password" value="✓"> 
@@ -94,7 +94,7 @@ $user_statement->closeCursor();
         </div>                              
         
         </aside> 
-        <script src="./js/swich-iframes.js"></script>
-        <script src="./js/validationProfile.js"></script>
+        <script src="../controler/js/swich-iframes.js"></script>
+        <script src="../controler/js/validationProfile.js"></script>
     </body>
 </html>  

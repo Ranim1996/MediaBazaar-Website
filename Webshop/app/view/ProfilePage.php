@@ -13,7 +13,7 @@ session_start();
         <link rel="stylesheet" href="./css/style-profilepage.css" type="text/css">
         <link rel="icon" href="./css/images/9A902BDC06A64F96A24667E63CFB24FC.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="./js/swich-iframes.js"></script>
+        <script src="./controler/js/swich-iframes.js"></script>
     </head>
     <body>
         <form action="./php/MyProfile.php" method="POST"></form>
@@ -35,7 +35,7 @@ session_start();
                 <aside id="profile-info">
                     <!-- <iframe id="myFrame"></iframe>  -->
                     <?php include ('./PersonalInfo.php') ?>                                         
-                </aside>
+                </aside> 
 
             </div>
         </main>
